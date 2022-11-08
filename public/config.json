@@ -2,14 +2,13 @@
     "workflowApiVersion": "1.1",
     "metaData": {
         "icon": "images/icon.png",
-        "iconSmall": "images/iconSmall.png",
-        "category": "message"
+        "category": "custom"
     },
     "type": "REST",
     "lang": {
         "en-US": {
-            "name": "Template",
-          "description": "A Template for a custom Journey Builder activity",
+            "name": "SFMC X MEETIME",
+          "description": "custom activity for integration salesforce marketing cloud with meetime",
           "step1Label": "Configure Activity"
         }
     },
