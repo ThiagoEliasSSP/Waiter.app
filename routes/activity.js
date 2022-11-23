@@ -1,11 +1,11 @@
 'use strict';
-var util = require('util');
+let util = require('util');
 
 // Deps
 const Path = require('path');
 const JWT = require(Path.join(__dirname, '..', 'lib', 'jwtDecoder.js'));
-var util = require('util');
-var http = require('https');
+let util = require('util');
+let http = require('https');
 
 exports.logExecuteData = [];
 
@@ -83,10 +83,10 @@ exports.execute = function (req, res) {
         }
 
         if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
-            
+
             // decoded in arguments
-            var decodedArgs = decoded.inArguments[0];
-            
+            let decodedArgs = decoded.inArguments[0];
+
             logData(req);
             res.send(200, 'Execute');
         } else {
