@@ -28,9 +28,32 @@
         <h1>SFMC X MEETIME</h1>
         <form action="" id="options">
             <h1>Cadencias</h1>
+            <div class="box-Arguments">
+
+            </div>
         </form>
     </div>
 </body>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-<script src="js/cadencias.js"></script>
+<script>
+    fetch('config.json')
+        .then(async (response) => {
+            const data = await response.json();
+            console.log(data.arguments.execute.inArguments);
+
+            const boxArguments = document.querySelector('.box-Arguments')
+            data.arguments.execute.inArguments.map((item) => {
+                const paragrafo = document.createElement('p')
+                const text = document.createTextNode(item)
+                paragrafo.appendChild(text)
+                boxArguments.appendChild(paragrafo)
+            })
+        })
+
+</script>
+<script>
+
+
+</script>
+
 </html>

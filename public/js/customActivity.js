@@ -16,10 +16,6 @@ define([
     connection.on('requestedInteraction', onRequestedInteraction);
     connection.on('requestedTriggerEventDefinition', onRequestedTriggerEventDefinition);
     connection.on('requestedDataSources', onRequestedDataSources);
-    connection.on('requestedInteraction', function (settings) {
-        const eventDefinitionKey = settings.triggers[0].metaData.eventDefinitionKey;
-        console.log("🚀 ~ file: customActivity.js ~ line 21 ~ eventDefinitionKey", eventDefinitionKey)
-    });
 
     connection.on('clickedNext', save);
 
@@ -32,7 +28,6 @@ define([
         connection.trigger('requestInteraction');
         connection.trigger('requestTriggerEventDefinition');
         connection.trigger('requestDataSources');
-        connection.trigger('requestInteraction');
     }
 
     function onRequestedDataSources(dataSources) {
